@@ -34,7 +34,7 @@ jobs:
           extensions: mbstring, zip, pdo_mysql
 
       - name: Copy environment file
-        run: cp .env.testing .env
+        run: cp .env.actions .env
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
