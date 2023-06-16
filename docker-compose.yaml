@@ -41,6 +41,15 @@ services:
     networks:
       - app-network
 
+  php-cli:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile.php-cli
+    volumes:
+      - ./laravel:/var/www/html
+    networks:
+      - app-network
+
 networks:
   app-network:
     driver: bridge
